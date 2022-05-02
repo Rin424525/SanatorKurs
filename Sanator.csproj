@@ -55,7 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Helpers\Manager.cs" />
+    <Compile Include="Helpers\User.cs" />
+    <Compile Include="Interfaces\DialogService.cs" />
+    <Compile Include="MODEL\Client.cs" />
+    <Compile Include="MODEL\Kategory.cs" />
+    <Compile Include="MODEL\Log.cs" />
+    <Compile Include="MODEL\Pay.cs" />
+    <Compile Include="MODEL\Service.cs" />
+    <Compile Include="MODEL\Status.cs" />
+    <Compile Include="MODEL\Uchet.cs" />
+    <Compile Include="MODEL\Worker.cs" />
+    <Compile Include="ViewModel\ClientViewModel.cs" />
+    <Compile Include="ViewModel\LogViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel1.cs" />
+    <Compile Include="ViewModel\MainViewModel2.cs" />
+    <Compile Include="ViewModel\PasswordViewModel.cs" />
+    <Compile Include="ViewModel\PayViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\ReportViewModel.cs" />
+    <Compile Include="ViewModel\ReserveViewModel.cs" />
+    <Compile Include="ViewModel\ServiceViewModel.cs" />
+    <Compile Include="ViewModel\UchetViewModel.cs" />
+    <Compile Include="ViewModel\WorkerViewModel.cs" />
     <Compile Include="View\ClientView.xaml.cs">
       <DependentUpon>ClientView.xaml</DependentUpon>
     </Compile>
@@ -67,6 +89,9 @@
     </Compile>
     <Compile Include="View\PayView.xaml.cs">
       <DependentUpon>PayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportView.xaml.cs">
+      <DependentUpon>ReportView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReserveView.xaml.cs">
       <DependentUpon>ReserveView.xaml</DependentUpon>
@@ -82,6 +107,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\ServiceView.xaml.cs">
+      <DependentUpon>ServiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TypeNumber.xaml.cs">
+      <DependentUpon>TypeNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UchetView.xaml.cs">
+      <DependentUpon>UchetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerView.xaml.cs">
+      <DependentUpon>WorkerView.xaml</DependentUpon>
     </Compile>
     <Page Include="View\ClientView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +136,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ReserveView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,9 +148,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\ServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TypeNumber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UchetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,6 +183,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTO\" />
-    <Folder Include="MODEL\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\+.png" />
