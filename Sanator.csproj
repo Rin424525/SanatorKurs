@@ -55,9 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DbOperation\DBoperatons.cs" />
     <Compile Include="Helpers\Manager.cs" />
     <Compile Include="Helpers\User.cs" />
     <Compile Include="Interfaces\DialogService.cs" />
+    <Compile Include="ModelDb\Model.cs" />
     <Compile Include="MODEL\Client.cs" />
     <Compile Include="MODEL\Kategory.cs" />
     <Compile Include="MODEL\Log.cs" />
@@ -192,9 +194,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\+.png" />
     <Resource Include="Images\-.jpg" />
