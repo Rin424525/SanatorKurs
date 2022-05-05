@@ -12,13 +12,14 @@
             <Setter Property="Control.Background" Value="#FF70B4DB"></Setter>
         </Style>
     </Window.Resources>
-    <Grid Margin="0,0,0,-6" >
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="177*"/>
             <RowDefinition Height="182*"/>
         </Grid.RowDefinitions>
-
-        <Image Source="C:\Users\rinsa\Desktop\Sanator-main\Images\hotel.jpg"   Margin="-27,-13,-9,-10" Grid.RowSpan="2" />
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\user\Desktop\SanatorKurs-master\Images\hostel.jpg"/>
+        </Grid.Background>
         <Button Command="{Binding OpenClientView}" Content="Клиенты" HorizontalAlignment="Left" Margin="178,112,0,0" VerticalAlignment="Top" Width="202" Height="41" BorderBrush="#FF040944" Background="#D870B4DB" Grid.Row="1"/>
         <Button Command="{Binding OpenReserveView}" Content="Забронировать номер" HorizontalAlignment="Left" Margin="34,146,0,0" VerticalAlignment="Top"  Width="202" RenderTransformOrigin="0.111,1.646" Height="41" BorderBrush="#FF000342" Background="#D870B4DB" Grid.RowSpan="2"/>
         <Button Command="{Binding OpenUchetView}" Content="Проживание" HorizontalAlignment="Left" Margin="34,82,0,0" VerticalAlignment="Top" Width="202" Height="41" Background="#D870B4DB" Foreground="Black" BorderBrush="#FF040944"/>
@@ -47,7 +48,7 @@
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD2D5EC"/>
-                    <GradientStop Color="Aquamarine"/>
+                    <GradientStop Color="#FF368CF3"/>
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>

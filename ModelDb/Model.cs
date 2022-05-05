@@ -31,10 +31,7 @@ namespace Sanator
                 .Property(e => e.passport)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Client>()
-                .Property(e => e.number)
-                .IsFixedLength();
-
+            
             modelBuilder.Entity<Client>()
                 .HasMany(e => e.Log)
                 .WithRequired(e => e.Client)
@@ -92,7 +89,7 @@ namespace Sanator
                 .IsUnicode(false);
 
             modelBuilder.Entity<Status>()
-                .HasMany(e => e.Number)
+               
                 .WithRequired(e => e.Status)
                 .HasForeignKey(e => e.ID_status_FK);
 
@@ -100,9 +97,7 @@ namespace Sanator
                 .Property(e => e.FIO)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Worker>()
-                .Property(e => e.number)
-                .IsFixedLength();
+          
 
             modelBuilder.Entity<Worker>()
                 .Property(e => e.position)

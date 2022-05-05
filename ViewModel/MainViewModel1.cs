@@ -1,6 +1,6 @@
-﻿using Host_v1.Interfaces;
-using Host_v1.View;
-using Host_v1.ViewModel;
+﻿using Sanator.Interfaces;
+using Sanator.View;
+using Sanator.ViewModel;
 
 using Microsoft.Win32;
 using System;
@@ -110,20 +110,7 @@ namespace Host_v1
             }
         }
 
-        private RelayCommand openNumbersView;
-        public RelayCommand OpenNumbersView
-        {
-            get
-            {
-                return openNumbersView ??
-                    (openNumbersView = new RelayCommand(obj =>
-                    {
-                        NumbersView l = new NumbersView();
-                        l.DataContext = new NumbersViewModel(db, dialog);
-                        l.ShowDialog();
-                    }));
-            }
-        }       
+      
         private RelayCommand openPayView;
         public RelayCommand OpenPayView
         {
@@ -169,20 +156,7 @@ namespace Host_v1
             }
         }
 
-        private RelayCommand openTypeNumberView;
-        public RelayCommand OpenTypeNumberView
-        {
-            get
-            {
-                return openTypeNumberView ??
-                    (openTypeNumberView = new RelayCommand(obj =>
-                    {
-                       TypeNumber t = new TypeNumber();
-                        t.DataContext = new TypeNumberViewModel(db, dialog);
-                        t.ShowDialog();
-                    }));
-            }
-        }
+     
 
         private RelayCommand openReserveView;
         public RelayCommand OpenReserveView

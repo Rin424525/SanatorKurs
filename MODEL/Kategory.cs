@@ -11,9 +11,7 @@ namespace Sanator
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Kategory()
-        {
-            Number = new HashSet<Number>();
-        }
+        { }
 
         [Key]
         public int ID_type { get; set; }
@@ -81,8 +79,7 @@ namespace Sanator
             }
             get { return photo; }
         }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Number> Number { get; set; }
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 

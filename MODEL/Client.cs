@@ -31,9 +31,7 @@ namespace Sanator
         [StringLength(20)]
         public string passport { get; set; }
 
-        [Required]
-        [StringLength(12)]
-        public string number { get; set; }
+       
 
         [Column(TypeName = "date")]
         public DateTime birth { get; set; }
@@ -57,16 +55,7 @@ namespace Sanator
                 OnPropertyChanged("Passport");
             }
         }
-        [NotMapped]
-        public string Number
-        {
-            get { return number; }
-            set
-            {
-                number = value;
-                OnPropertyChanged("Number");
-            }
-        }
+        
         [NotMapped]
         public DateTime Birth
         {
@@ -118,6 +107,9 @@ namespace Sanator
             }
 
         }
+
+        public object Number { get; internal set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {

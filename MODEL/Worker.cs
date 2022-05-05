@@ -24,10 +24,7 @@ namespace Sanator
         [StringLength(50)]
         public string FIO { get; set; }
 
-        [Required]
-        [StringLength(11)]
-        public string number { get; set; }
-
+       
         [Required]
         [StringLength(20)]
         public string position { get; set; }
@@ -100,16 +97,7 @@ namespace Sanator
                 OnPropertyChanged("Passport");
             }
         }
-        [NotMapped]
-        public string Number
-        {
-            get { return number; }
-            set
-            {
-                number = value;
-                OnPropertyChanged("Number");
-            }
-        }
+       
         [NotMapped]
         public DateTime Birth
         {
@@ -122,6 +110,7 @@ namespace Sanator
         }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Uchet> Uchet { get; set; }
+        public object Number { get; internal set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
