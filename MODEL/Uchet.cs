@@ -1,22 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
+using System.Runtime.CompilerServices;
+using WpfApp15.Tools;
+
 namespace Sanator
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-    using System.Runtime.CompilerServices;
+
 
     [Table("Uchet")]
-    public partial class Uchet: INotifyPropertyChanged
+    public partial class Uchet : INotifyPropertyChanged
     {
         [Key]
         public int ID_ychet { get; set; }
 
         public DateTime Date_start { get; set; }
-      
-        public DateTime Date_finish { get; set; }        
+
+        public DateTime Date_finish { get; set; }
 
         public int ID_number_FK { get; set; }
 
@@ -27,6 +30,7 @@ namespace Sanator
         public int ID_client_FK { get; set; }
 
         public virtual Client Client { get; set; }
+
         [NotMapped]
         public Client Client1
         {
@@ -40,8 +44,11 @@ namespace Sanator
        
         {
         
+        
         public virtual Pay Pay { get; set; }
         [NotMapped]
+
+
         public Pay Pay1
         {
             get { return Pay; }
@@ -51,6 +58,7 @@ namespace Sanator
                 OnPropertyChanged("Pay1");
             }
         }
+    
         public virtual Worker Worker { get; set; }
         [NotMapped]
         public Worker Worker1
@@ -101,3 +109,4 @@ namespace Sanator
         }
     }
 }
+
