@@ -21,7 +21,8 @@ namespace Sanator.Pages
     {
         public ClientView()
         {
-            InitializeComponent();
+            
+            
         }
     }
 }

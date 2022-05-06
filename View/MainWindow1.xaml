@@ -18,7 +18,7 @@
             <RowDefinition Height="182*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\user\Desktop\SanatorKurs-master\Images\hostel.jpg"/>
+            <ImageBrush ImageSource="C:\Users\user\Source\Repos\SanatorKurs10\Images\hotel.jpg"/>
         </Grid.Background>
         <Button Command="{Binding OpenClientView}" Content="Клиенты" HorizontalAlignment="Left" Margin="178,112,0,0" VerticalAlignment="Top" Width="202" Height="41" BorderBrush="#FF040944" Background="#D870B4DB" Grid.Row="1"/>
         <Button Command="{Binding OpenReserveView}" Content="Забронировать номер" HorizontalAlignment="Left" Margin="34,146,0,0" VerticalAlignment="Top"  Width="202" RenderTransformOrigin="0.111,1.646" Height="41" BorderBrush="#FF000342" Background="#D870B4DB" Grid.RowSpan="2"/>
