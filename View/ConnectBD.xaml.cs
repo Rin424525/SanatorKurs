@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sanator.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,15 @@ using System.Windows.Shapes;
 namespace Sanator.View
 {
     /// <summary>
-    /// Логика взаимодействия для Password.xaml
+    /// Interaction logic for ConnectBD.xaml
     /// </summary>
-    public partial class Password : Window
+    public partial class ConnectBD : Page
     {
-        public Password()
+        public ConnectBD()
         {
             InitializeComponent();
+            DataContext = new ConnectBDVM(passwordBox);
+
         }
     }
 }

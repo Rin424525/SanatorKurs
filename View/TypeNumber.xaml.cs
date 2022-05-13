@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для TypeNumber.xaml
     /// </summary>
-    public partial class TypeNumber : Page
+    public partial class TypeNumber : Window
     {
         public TypeNumber()
         {

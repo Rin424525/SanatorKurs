@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
+
 using System.Runtime.CompilerServices;
-using WpfApp15.Tools;
+
 
 namespace Sanator
 {
@@ -42,7 +42,7 @@ namespace Sanator
             }
         }
        
-        {
+        
         
         
         public virtual Pay Pay { get; set; }
@@ -101,6 +101,7 @@ namespace Sanator
         }
 
         public object Number1 { get; internal set; }
+        public object Number { get; internal set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

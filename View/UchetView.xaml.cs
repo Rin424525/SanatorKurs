@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для UchetView.xaml
     /// </summary>
-    public partial class UchetView : Page
+    public partial class UchetView : Window
     {
         public UchetView()
         {

@@ -6,7 +6,7 @@ namespace Sanator
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+    using Microsoft.EntityFrameworkCore;
     using System.Runtime.CompilerServices;
 
     [Table("Client")]
@@ -30,9 +30,6 @@ namespace Sanator
         [Required]
         [StringLength(20)]
         public string passport { get; set; }
-
-       
-
         [Column(TypeName = "date")]
         public DateTime birth { get; set; }
         [NotMapped]

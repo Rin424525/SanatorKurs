@@ -1,8 +1,8 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +54,12 @@ namespace Sanator
         {
             return db.Status.Find(id);
         }
+
+        internal object GetAllNumber()
+        {
+            throw new NotImplementedException();
+        }
+
         public Client FindClient(int id)
         {
             return db.Clients.Find(id);

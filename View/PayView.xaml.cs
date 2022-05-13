@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для PayView.xaml
     /// </summary>
-    public partial class PayView : Page
+    public partial class PayView : Window
     {
         public PayView()
         {

@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для ServiceView.xaml
     /// </summary>
-    public partial class ServiceView : Page
+    public partial class ServiceView : Window
     {
         public ServiceView()
         {

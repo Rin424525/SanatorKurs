@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для ReserveView.xaml
     /// </summary>
-    public partial class ReserveView : Page
+    public partial class ReserveView : Window
     {
         public ReserveView()
         {

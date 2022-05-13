@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для ReportView.xaml
     /// </summary>
-    public partial class ReportView : Page
+    public partial class ReportView : Window
     {
         public ReportView()
         {

@@ -18,7 +18,7 @@ namespace Sanator.View
     /// <summary>
     /// Логика взаимодействия для WorkerView.xaml
     /// </summary>
-    public partial class WorkerView : Page
+    public partial class WorkerView : Window
     {
         public WorkerView()
         {
