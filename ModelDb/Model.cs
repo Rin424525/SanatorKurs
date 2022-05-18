@@ -18,6 +18,7 @@ namespace Sanator
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Kategory> Kategory { get; set; }
         public virtual DbSet<Log> Log { get; set; }
+        public virtual DbSet<Number> Number { get; set; }
         public virtual DbSet<Pay> Pay { get; set; }
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<Status> Status { get; set; }
@@ -37,7 +38,11 @@ namespace Sanator
             modelBuilder.Entity<Client>()
                 .Property(e => e.passport)
                 .IsFixedLength();
-            
+
+            modelBuilder.Entity<Client>()
+               .Property(e => e.Number)
+               .IsFixedLength();
+
             modelBuilder.Entity<Client>()
                 .HasMany(e => e.Log)
                 .WithOne(e => e.Client);
@@ -67,7 +72,13 @@ namespace Sanator
             modelBuilder.Entity<Kategory>()
                 .HasMany(e => e.Number)
                 .WithOne(e => e.Kategory);
-                //.HasForeignKey(e => e.ID_type_FK);
+            //.HasForeignKey(e => e.ID_type_FK);
+
+            modelBuilder.Entity<Number>()
+          .HasMany(e => e.Uchet)
+          .WithOne(e => e.Number);
+          //.HasForeignKey(e => e.ID_number_FK)
+          //.WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Pay>()
                 .HasMany(e => e.Log)
@@ -98,15 +109,22 @@ namespace Sanator
                 .IsUnicode(false);
 
             modelBuilder.Entity<Status>()
-                 .HasMany(e => e.Status)
+              .HasMany(e => e.Number)
                 .WithOne(e => e.Status);
                 //.HasForeignKey(e => e.ID_status_FK);
+            
 
             modelBuilder.Entity<Worker>()
                 .Property(e => e.FIO)
                 .IsFixedLength();
 
-          
+            modelBuilder.Entity<Worker>()
+                .Property(e => e.Number)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Worker>()
+                .Property(e => e.position)
+                .IsFixedLength();
 
             modelBuilder.Entity<Worker>()
                 .Property(e => e.position)

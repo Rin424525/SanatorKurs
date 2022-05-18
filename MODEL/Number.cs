@@ -1,11 +1,10 @@
-namespace Host_v1
+namespace Sanator
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+    using System.ComponentModel.DataAnnotations.Schema; 
     using System.Runtime.CompilerServices;
 
     [Table("Number")]

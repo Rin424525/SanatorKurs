@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Sanator.Pages
+namespace Sanator.View
 {
     /// <summary>
-    /// Interaction logic for Servicesjournal.xaml
+    /// Interaction logic for LogView.xaml
     /// </summary>
-    public partial class Servicesjournal : Window
+    public partial class LogView : Window
     {
-        public Servicesjournal()
+        public LogView()
         {
             InitializeComponent();
         }

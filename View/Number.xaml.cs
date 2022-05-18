@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 namespace Sanator.View
 {
     /// <summary>
-    /// Interaction logic for ClientView.xaml
+    /// Interaction logic for Number.xaml
     /// </summary>
-    public partial class ClientView : Window
+    public partial class Number : Window
     {
-        public ClientView()
+        public Number()
         {
-            
-            
+            InitializeComponent();
         }
     }
 }

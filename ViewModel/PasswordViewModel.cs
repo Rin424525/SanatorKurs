@@ -53,11 +53,10 @@ namespace Sanator.ViewModel
                             var selectedUsers = workers.Where(u => u.Login.TrimEnd() == Login && u.Parol.Trim() == passwordBox.Password);
                             if (selectedUsers.Count() > 0) // если такая запись существует
                             {
-
+                                MainWindow1 main = new MainWindow1();
                                 ds.ShowMessage("Добро пожаловать, " + selectedUsers.FirstOrDefault().FIO.TrimEnd() + " <3"); // говорим, что авторизовался
                                 if (selectedUsers.FirstOrDefault().position.TrimEnd() == "Администратор")
                                 {
-                                    MainWindow1 main = new MainWindow1();
                                     User.ID_worker = selectedUsers.FirstOrDefault().ID_worker;
                                     User.FIO = selectedUsers.FirstOrDefault().Fio;
                                     WindowManager.CloseWindow(ViewID);
@@ -70,7 +69,7 @@ namespace Sanator.ViewModel
                                   
                                     User.ID_worker = selectedUsers.FirstOrDefault().ID_worker;
                                     User.FIO = selectedUsers.FirstOrDefault().Fio;
-                                    main.DataContext =new MainViewModel2(db,ds);
+                                    main.DataContext =new MainViewModel1(db,ds);
                                     main.Show();
                                     WindowManager.CloseWindow(ViewID);                                   
                                 }

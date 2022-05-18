@@ -173,6 +173,7 @@
     <Compile Include="MODEL\Client.cs" />
     <Compile Include="MODEL\Kategory.cs" />
     <Compile Include="MODEL\Log.cs" />
+    <Compile Include="MODEL\Number.cs" />
     <Compile Include="MODEL\Pay.cs" />
     <Compile Include="MODEL\Service.cs" />
     <Compile Include="MODEL\Status.cs" />
@@ -184,12 +185,14 @@
     <Compile Include="ViewModel\IRequireViewIdentification.cs" />
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel1.cs" />
+    <Compile Include="ViewModel\Number.cs" />
     <Compile Include="ViewModel\PasswordViewModel.cs" />
     <Compile Include="ViewModel\PayViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ReportViewModel.cs" />
     <Compile Include="ViewModel\ReserveViewModel.cs" />
     <Compile Include="ViewModel\ServiceViewModel.cs" />
+    <Compile Include="ViewModel\TypeNumber.cs" />
     <Compile Include="ViewModel\UchetViewModel.cs" />
     <Compile Include="ViewModel\WorkerViewModel.cs" />
     <Compile Include="View\ClientView.xaml.cs">
@@ -198,8 +201,14 @@
     <Compile Include="View\ConnectBD.xaml.cs">
       <DependentUpon>ConnectBD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LogView.xaml.cs">
+      <DependentUpon>LogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainWindow1.xaml.cs">
       <DependentUpon>MainWindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Number.xaml.cs">
+      <DependentUpon>Number.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Password.xaml.cs">
       <DependentUpon>Password.xaml</DependentUpon>
@@ -212,9 +221,6 @@
     </Compile>
     <Compile Include="View\ReserveView.xaml.cs">
       <DependentUpon>ReserveView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Servicesjournal.xaml.cs">
-      <DependentUpon>Servicesjournal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools\ColumnAttribute.cs" />
     <Compile Include="Tools\CommandVM.cs" />
@@ -245,9 +251,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\LogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Number.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Password.xaml">
       <SubType>Designer</SubType>
@@ -264,10 +278,6 @@
     <Page Include="View\ReserveView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Servicesjournal.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\ServiceView.xaml">
       <SubType>Designer</SubType>

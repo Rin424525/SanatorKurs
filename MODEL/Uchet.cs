@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 
 
@@ -41,10 +41,20 @@ namespace Sanator
                 OnPropertyChanged("Client1");
             }
         }
-       
-        
-        
-        
+
+        public virtual Number Number { get; set; }
+        [NotMapped]
+        public Number Number1
+        {
+            get { return Number; }
+            set
+            {
+                Number = value;
+                OnPropertyChanged("Number1");
+            }
+        }
+
+
         public virtual Pay Pay { get; set; }
         [NotMapped]
 
@@ -100,8 +110,7 @@ namespace Sanator
 
         }
 
-        public object Number1 { get; internal set; }
-        public object Number { get; internal set; }
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

@@ -1,19 +1,17 @@
 ﻿
-using Sanator;
 using Sanator.Interfaces;
-using Sanator.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Host_v1.ViewModel
+namespace Sanator.ViewModel
 {
     class LogViewModel : INotifyPropertyChanged
     {
@@ -27,11 +25,11 @@ namespace Host_v1.ViewModel
         {
             this.ds = ds;
             this.db = db;
-       
+
             log = new ObservableCollection<Log>(this.db.GetAllLog());
             clients = new ObservableCollection<Client>(this.db.GetAllClient());
             services = new ObservableCollection<Service>(this.db.GetAllService());
-            SelectedLog=log.FirstOrDefault();
+            SelectedLog = log.FirstOrDefault();
         }
 
         public Log SelectedLog
@@ -73,8 +71,8 @@ namespace Host_v1.ViewModel
                 return addLog ??
                     (addLog = new RelayCommand(obj =>
                     {
-                        Log _log = new Log() {Client1=new Client() { Fio="Новый объект"}, Date=DateTime.Now };
-                        log.Insert(0,_log);
+                        Log _log = new Log() { Client1 = new Client() { Fio = "Новый объект" }, Date = DateTime.Now };
+                        log.Insert(0, _log);
                         SelectedLog = _log;
                         ds.ShowMessage("Новый объект добавлен!");
                     }));
@@ -90,18 +88,18 @@ namespace Host_v1.ViewModel
                     {
                         try
                         {
-                          if (SelectedLog != null)
-                          {
-                            var log = db.FindLog(SelectedLog.ID_line);
-                            if (log == null)
+                            if (SelectedLog != null)
                             {
-                                db.AddLog(SelectedLog);
-                            }
-                         
-                            db.Save();
+                                var log = db.FindLog(SelectedLog.ID_line);
+                                if (log == null)
+                                {
+                                    db.AddLog(SelectedLog);
+                                }
+
+                                db.Save();
                                 ds.ShowMessage("Изменения сохранены!");
-                          }
-                          else ds.ShowMessage("Пожалуйста, выберете запись из списка!");
+                            }
+                            else ds.ShowMessage("Пожалуйста, выберете запись из списка!");
                         }
                         catch
                         {

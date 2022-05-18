@@ -112,7 +112,7 @@ namespace Sanator.ViewModel
                                                 Date_start = date_start,
                                                 Date_finish = date_finish
                                             };
-                                            if (date_start <= DateTime.Today && DateTime.Today <= date_finish) number.Status1 = db.FindStatus(2);
+                                            if (date_start <= DateTime.Today && DateTime.Today <= date_finish) number.Status = db.FindStatus(2);
                                             db.AddUchet(uchett);
                                             db.Save();
                                             text = "";

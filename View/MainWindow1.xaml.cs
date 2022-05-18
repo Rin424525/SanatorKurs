@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Sanator.Pages
+namespace Sanator.View
 {
     /// <summary>
     /// Interaction logic for MainWindow1.xaml
@@ -22,6 +22,7 @@ namespace Sanator.Pages
         public MainWindow1()
         {
             InitializeComponent();
+            
         }
     }
 }

@@ -9,12 +9,12 @@ namespace Sanator
     using System.Runtime.CompilerServices;
     public partial class Status: INotifyPropertyChanged
     {
-        internal object status;
+       
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Status()
         {
-           
+            Number = new HashSet<Number>();
         }
 
         [Key]
@@ -35,7 +35,8 @@ namespace Sanator
             }
         }
 
-        public object Status { get; internal set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Number> Number { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

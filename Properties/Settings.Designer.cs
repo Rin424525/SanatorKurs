@@ -16,9 +16,7 @@ namespace Sanator.Properties {
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        internal string server;
-        internal string pass;
-
+        
         public static Settings Default {
             get {
                 return defaultInstance;
@@ -40,24 +38,24 @@ namespace Sanator.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("student")]
-        public string password {
+        public string pass {
             get {
-                return ((string)(this["password"]));
+                return ((string)(this["pass"]));
             }
             set {
-                this["password"] = value;
+                this["pass"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.12")]
-        public string host {
+        public string server {
             get {
-                return ((string)(this["host"]));
+                return ((string)(this["server"]));
             }
             set {
-                this["host"] = value;
+                this["server"] = value;
             }
         }
         

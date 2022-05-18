@@ -7,11 +7,13 @@ namespace Sanator
     using System.Runtime.CompilerServices;
 
     [Table("Kategory")]
-    public partial class Kategory: INotifyPropertyChanged
+    public partial class Kategory : INotifyPropertyChanged
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Kategory()
-        { }
+        {
+            Number = new HashSet<Number>();
+        }
 
         [Key]
         public int ID_type { get; set; }
@@ -68,7 +70,7 @@ namespace Sanator
             }
             get { return cost; }
         }
-      
+
         [NotMapped]
         public string Photo
         {
@@ -79,11 +81,12 @@ namespace Sanator
             }
             get { return photo; }
         }
-       
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Number> Number { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }

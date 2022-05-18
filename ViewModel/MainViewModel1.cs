@@ -1,7 +1,6 @@
 ﻿using Sanator.Interfaces;
 using Sanator.View;
 using Sanator.ViewModel;
-
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -16,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
+
 
 namespace Sanator
 {
@@ -39,7 +39,7 @@ namespace Sanator
             foreach (var obj in uchets)
             {
                 if (DateTime.Today >= obj.Date_start && DateTime.Today <= obj.Date_finish && !flag[obj.Number.ID - 1]) { obj.Number.Status1 = db.FindStatus(2); flag[obj.Number.ID - 1] = true; }
-                else if (obj.Number.Status != db.FindStatus(4)) obj.Number.Status1 = db.FindStatus(1);
+                else if (obj.Number.Status1 != db.FindStatus(4)) obj.Number.Status1 = db.FindStatus(1);
             }            
             timer = new DispatcherTimer(); 
             timer.Tick += new EventHandler(timerTick);
@@ -57,7 +57,7 @@ namespace Sanator
                 foreach (var obj in uchets)
                 {
                    if (DateTime.Today >= obj.Date_start && DateTime.Today <= obj.Date_finish && !flag[obj.Number.ID - 1]) { obj.Number.Status1 = db.FindStatus(2); flag[obj.Number.ID - 1] = true; }
-                   else if (obj.Number.Status != db.FindStatus(4)) obj.Number.Status1 = db.FindStatus(1);
+                   else if (obj.Number.Status1 != db.FindStatus(4)) obj.Number.Status1 = db.FindStatus(1);
                 }
             }
   

@@ -29,7 +29,11 @@ namespace Sanator
         {
             return db.Log;
         }
-      
+        public DbSet<Number> GetAllNumber()
+        {
+            return db.Number;
+        }
+
         public DbSet<Pay> GetAllPay()
         {
             return db.Pay;
@@ -53,11 +57,6 @@ namespace Sanator
         public Status FindStatus(int id)
         {
             return db.Status.Find(id);
-        }
-
-        internal object GetAllNumber()
-        {
-            throw new NotImplementedException();
         }
 
         public Client FindClient(int id)
@@ -97,11 +96,22 @@ namespace Sanator
         {
             db.Worker.Remove(worker);
         }
+
+        internal Number FindNumber(int iD)
+        {
+            return db.Number.Find(iD);
+        }
+
         public void RemoveLog(Log log)
         {
             db.Log.Remove(log);
         }
-       
+
+        internal void RemoveNumber(Number selectedNumber)
+        {
+            db.Number.Remove(selectedNumber);
+        }
+
         public void RemovePay(Pay pay)
         {
             db.Pay.Remove(pay);
@@ -139,6 +149,12 @@ namespace Sanator
         {
             db.Uchet.Add(uchet);
         }
+
+        internal void AddNumber(Number selectedNumber)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddPay(Pay pay)
         {
             db.Pay.Add(pay);
@@ -151,5 +167,7 @@ namespace Sanator
         {
             db.SaveChanges();
         }
+
+       
     }
 }

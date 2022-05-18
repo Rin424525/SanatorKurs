@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Host_v1.ViewModel
+namespace Sanator.ViewModel
 {
     class ServiceViewModel: INotifyPropertyChanged
     {

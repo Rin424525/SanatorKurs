@@ -19,7 +19,7 @@ namespace Sanator.View
     /// <summary>
     /// Interaction logic for ConnectBD.xaml
     /// </summary>
-    public partial class ConnectBD : Page
+    public partial class ConnectBD : Window
     {
         public ConnectBD()
         {
