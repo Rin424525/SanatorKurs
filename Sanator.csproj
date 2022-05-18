@@ -226,7 +226,6 @@
     <Compile Include="Tools\CommandVM.cs" />
     <Compile Include="Tools\TableAttribute.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
-    <Compile Include="ViewModels\MainVM.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

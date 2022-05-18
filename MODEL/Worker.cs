@@ -110,7 +110,7 @@ namespace Sanator
         }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Uchet> Uchet { get; set; }
-        public object Number { get; internal set; }
+        public string Number { get; internal set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")

@@ -1,17 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 using System;
 
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
-namespace Sanator
+namespace Sanator.ModelDb
 {
     public partial class Model1 : DbContext
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("data source=desktop-np9pltu;initial catalog=Host;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
+            MySqlConnectionStringBuilder b = new MySqlConnectionStringBuilder();
+            b.Database = "host1125";
+            b.UserID = "student";
+            b.Password = "student";
+            b.Server = "192.168.200.13";
+            b.CharacterSet = "utf8";
+
+            optionsBuilder.UseMySQL(b.ToString());
             base.OnConfiguring(optionsBuilder); 
         }
 
@@ -25,13 +33,17 @@ namespace Sanator
         public virtual DbSet<Uchet> Uchet { get; set; }
         public virtual DbSet<Worker> Worker { get; set; }
 
+        public Model1()
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            //Database.EnsureCreated();
+            
 
-            modelBuilder.Entity<Client>()
+/*            modelBuilder.Entity<Client>()
                 .Property(e => e.FIO)
                 .IsFixedLength();
 
@@ -48,19 +60,19 @@ namespace Sanator
                 .WithOne(e => e.Client);
                /* .WithRequired(e => e.Client)
                 .HasForeignKey(e => e.ID_client_FK);*/
-
+/*
             modelBuilder.Entity<Client>()
                 .HasMany(e => e.Pay)
-                .WithOne(e => e.Client);
+                .WithOne(e => e.Client);*/
             /* .WithRequired(e => e.Client)
              .HasForeignKey(e => e.ID_client_FK);*/
-
+            /*
             modelBuilder.Entity<Client>()
                 .HasMany(e => e.Uchet)
-                .WithOne(e => e.Client);
+                .WithOne(e => e.Client);*/
                 //.WithRequired(e => e.Client)
                 //.HasForeignKey(e => e.ID_client_FK);
-
+                /*
             modelBuilder.Entity<Kategory>()
                 .Property(e => e.name)
                 .IsFixedLength();
@@ -71,26 +83,26 @@ namespace Sanator
 
             modelBuilder.Entity<Kategory>()
                 .HasMany(e => e.Number)
-                .WithOne(e => e.Kategory);
+                .WithOne(e => e.Kategory);*/
             //.HasForeignKey(e => e.ID_type_FK);
-
+            /*
             modelBuilder.Entity<Number>()
           .HasMany(e => e.Uchet)
-          .WithOne(e => e.Number);
+          .WithOne(e => e.Number);*/
           //.HasForeignKey(e => e.ID_number_FK)
           //.WillCascadeOnDelete(false);
-
+          /*
             modelBuilder.Entity<Pay>()
                 .HasMany(e => e.Log)
-                .WithOne(e => e.Pay);
+                .WithOne(e => e.Pay);*/
                 //.HasForeignKey(e => e.ID_pay_FK);
-
+/*
             modelBuilder.Entity<Pay>()
                 .HasMany(e => e.Uchet)
-               .WithOne(e => e.Pay);
+               .WithOne(e => e.Pay);*/
                 //.HasForeignKey(e => e.ID_pay_FK);
 
-            modelBuilder.Entity<Service>()
+        /*    modelBuilder.Entity<Service>()
                 .Property(e => e.name)
                 .IsFixedLength();
 
@@ -100,9 +112,9 @@ namespace Sanator
 
             modelBuilder.Entity<Service>()
                 .HasMany(e => e.Log)
-               .WithOne(e => e.Service);
+               .WithOne(e => e.Service);*/
                 //.HasForeignKey(e => e.ID_service_FK);
-
+                /*
             modelBuilder.Entity<Status>()
                 .Property(e => e.name)
                 .IsFixedLength()
@@ -110,10 +122,10 @@ namespace Sanator
 
             modelBuilder.Entity<Status>()
               .HasMany(e => e.Number)
-                .WithOne(e => e.Status);
+                .WithOne(e => e.Status);*/
                 //.HasForeignKey(e => e.ID_status_FK);
             
-
+            /*
             modelBuilder.Entity<Worker>()
                 .Property(e => e.FIO)
                 .IsFixedLength();
@@ -144,7 +156,7 @@ namespace Sanator
 
             modelBuilder.Entity<Worker>()
                 .HasMany(e => e.Uchet)
-                .WithOne(e => e.Worker);
+                .WithOne(e => e.Worker);*/
                 //.HasForeignKey(e => e.ID_worker_FK)
                 //.WillCascadeOnDelete(false);
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace WpfApp15.Tools
+namespace Sanator.Tools
 {
     public class CommandVM : ICommand
     {

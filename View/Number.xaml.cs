@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Sanator.ModelDb;
+using Sanator.Tools;
 
 namespace Sanator.View
 {
@@ -29,5 +31,23 @@ namespace Sanator.View
             TypeNumber t = new TypeNumber();
             t.Show();
         }
+
+        
+        public Number EditNumber { get; set; }
+        public  CommandVM SaveNumber { get; set; }
+        //private void Init()
+        //{
+
+        //    SaveNumber = new CommandVM(() => {
+
+        //        EditNumber.EditNumber = EditNumber.ID;
+        //        var model = SqlModel.GetInstance();
+        //        if (EditNumber.ID == 0)
+        //            model.Insert(EditNumber);
+        //        else
+        //            model.Update(EditNumber);
+                
+        //    });
+        //}
     }
 }

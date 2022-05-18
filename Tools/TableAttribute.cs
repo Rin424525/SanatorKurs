@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WpfApp15.Tools
+namespace Sanator.Tools
 {
     internal class TableAttribute : Attribute
     {

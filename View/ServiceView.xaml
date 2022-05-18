@@ -71,7 +71,7 @@
 
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Command="{Binding  SaveService}"  HorizontalAlignment="Left" Margin="35,85,0,0" VerticalAlignment="Top" Width="52" Height="35" Grid.Column="1" RenderTransformOrigin="0.596,0.767">
+        <Button Command="{Binding  SaveService}"  HorizontalAlignment="Left" Margin="35,85,0,0" VerticalAlignment="Top" Width="52" Height="35" Grid.Column="1" >
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
