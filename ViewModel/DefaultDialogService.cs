@@ -1,29 +1,30 @@
-﻿using Sanator.Interfaces;
+﻿using Microsoft.Win32;
+using System;
 
-namespace Sanator.ViewModel
+namespace Sanator
 {
     internal class DefaultDialogService : IDialogService
     {
-        public string FilePath { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
-        public bool OpenFileDialog()
-        {
-            throw new System.NotImplementedException();
-        }
+        public string FilePath { get; set; }
 
         public bool SaveFileDialog()
         {
-            throw new System.NotImplementedException();
+            var dialog = new SaveFileDialog();
+            if (dialog.ShowDialog() == true)
+                FilePath = dialog.FileName;
+            else
+                FilePath = null;
+            return FilePath != null;
         }
 
-        public void ShowMessage(string message)
+        public void ShowMessage(string v)
         {
-            throw new System.NotImplementedException();
+            System.Windows.MessageBox.Show(v);
         }
 
-        public bool ShowMessageOKCancel(string message)
+        public bool ShowMessageOKCancel(string v)
         {
-            throw new System.NotImplementedException();
+            return System.Windows.MessageBox.Show(v, "Запрос", System.Windows.MessageBoxButton.OKCancel) == System.Windows.MessageBoxResult.OK;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Sanator.Interfaces;
+﻿
 using Sanator.View;
 using Sanator.ViewModel;
 using Microsoft.Win32;
@@ -148,7 +148,7 @@ namespace Sanator
                 return openClientView ??
                     (openClientView = new RelayCommand(obj =>
                     {
-                        ClientView f = new ClientView();
+                        ClientView f = new ClientView(new ClientViewModel(db, dialog)) ;
                     
                         f.DataContext = new ClientViewModel(db,dialog);
                         f.ShowDialog();

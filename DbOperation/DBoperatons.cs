@@ -11,10 +11,11 @@ namespace Sanator
 {
     public class DbOperations
     {
-        Model1 db;
+        static Model1 db;
         public DbOperations()
         {
-            db = new Model1();
+            if (db == null)
+                db = new Model1();
         }
         public DbSet<Client> GetAllClient()
         {

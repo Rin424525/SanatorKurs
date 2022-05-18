@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Sanator.Interfaces;
+
 using Sanator.ViewModel;
 
 namespace Sanator.View
@@ -30,7 +30,7 @@ namespace Sanator.View
 
         private void OpenClientView(object sender, RoutedEventArgs e)
         {
-            ClientView m = new ClientView();
+            ClientView m = new ClientView(new ClientViewModel(new DbOperations(), new DefaultDialogService()));
             m.Show();
         }
 

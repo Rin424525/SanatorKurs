@@ -167,7 +167,6 @@
     <Compile Include="DbOperation\DBoperatons.cs" />
     <Compile Include="Helpers\Manager.cs" />
     <Compile Include="Helpers\User.cs" />
-    <Compile Include="Interfaces\DialogService.cs" />
     <Compile Include="ModelDb\Model.cs" />
     <Compile Include="ModelDb\MySqlDB.cs" />
     <Compile Include="MODEL\Client.cs" />
@@ -182,6 +181,7 @@
     <Compile Include="ViewModels\ConnectBDVM.cs" />
     <Compile Include="ViewModel\ClientViewModel.cs" />
     <Compile Include="ViewModel\DefaultDialogService.cs" />
+    <Compile Include="ViewModel\IDialogService.cs" />
     <Compile Include="ViewModel\IRequireViewIdentification.cs" />
     <Compile Include="ViewModel\LogViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel1.cs" />
