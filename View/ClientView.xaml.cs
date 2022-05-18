@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Sanator.ViewModel;
 
 namespace Sanator.View
 {
@@ -19,10 +20,10 @@ namespace Sanator.View
     /// </summary>
     public partial class ClientView : Window
     {
-        public ClientView()
+        public ClientView(ClientViewModel vm)
         {
-            
-            
+            InitializeComponent();
+            DataContext = vm;
         }
     }
 }

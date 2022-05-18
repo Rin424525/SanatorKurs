@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace Sanator.ViewModel
 {
-    class ClientViewModel : INotifyPropertyChanged
+    public class ClientViewModel : INotifyPropertyChanged
     {
         public DbOperations db;
         public event PropertyChangedEventHandler PropertyChanged;

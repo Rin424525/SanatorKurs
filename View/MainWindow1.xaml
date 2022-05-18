@@ -20,12 +20,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\user\Source\Repos\SanatorKurs10\Images\hotel.jpg"/>
         </Grid.Background>
-        <Button Command="{Binding OpenClientView}" Content="Клиенты" HorizontalAlignment="Left" Margin="178,112,0,0" VerticalAlignment="Top" Width="202" Height="41" BorderBrush="#FF040944" Background="#D870B4DB" Grid.Row="1"/>
-        <Button Command="{Binding OpenReserveView}" Content="Забронировать номер" HorizontalAlignment="Left" Margin="34,146,0,0" VerticalAlignment="Top"  Width="202" RenderTransformOrigin="0.111,1.646" Height="41" BorderBrush="#FF000342" Background="#D870B4DB" Grid.RowSpan="2"/>
-        <Button Command="{Binding OpenUchetView}" Content="Проживание" HorizontalAlignment="Left" Margin="34,82,0,0" VerticalAlignment="Top" Width="202" Height="41" Background="#D870B4DB" Foreground="Black" BorderBrush="#FF040944"/>
-        <Button Command="{Binding OpenServiceView}" Content="Услуги" HorizontalAlignment="Left" Margin="316,29,0,0" VerticalAlignment="Top" Width="202" Height="41" BorderBrush="#FF040944" Background="#D870B4DB" Grid.Row="1"/>
-        <Button Command="{Binding OpenLogView}" Content="Оказать услугу" HorizontalAlignment="Left" Margin="34,29,0,0" VerticalAlignment="Top" Width="202" Height="41" RenderTransformOrigin="-0.029,7.263" Background="#D870B4DB" BorderBrush="#FF040944" Grid.Row="1"/>
-        <Button Command="{Binding OpenPasswordView}" Margin="484,10,0,0" Height="49" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF3387EC" RenderTransformOrigin="-7.72,2.224">
+        <Button Click="OpenClientView" Content="Клиенты" HorizontalAlignment="Left" Margin="178,112,0,0" VerticalAlignment="Top" Width="202" Height="41" BorderBrush="#FF040944" Background="#D870B4DB" Grid.Row="1"/>
+        <Button Click="OpenReserveView" Content="Забронировать номер" HorizontalAlignment="Left" Margin="34,146,0,0" VerticalAlignment="Top"  Width="202" RenderTransformOrigin="0.111,1.646" Height="41" BorderBrush="#FF000342" Background="#D870B4DB" Grid.RowSpan="2"/>
+        <Button Click="OpenUchetView" Content="Проживание" HorizontalAlignment="Left" Margin="34,82,0,0" VerticalAlignment="Top" Width="202" Height="41" Background="#D870B4DB" Foreground="Black" BorderBrush="#FF040944"/>
+        <Button Click="OpenServiceView" Content="Услуги" HorizontalAlignment="Left" Margin="316,29,0,0" VerticalAlignment="Top" Width="202" Height="41" BorderBrush="#FF040944" Background="#D870B4DB" Grid.Row="1"/>
+        <Button Click="OpenLogView" Content="Оказать услугу" HorizontalAlignment="Left" Margin="34,29,0,0" VerticalAlignment="Top" Width="202" Height="41" RenderTransformOrigin="-0.029,7.263" Background="#D870B4DB" BorderBrush="#FF040944" Grid.Row="1"/>
+        <Button Click="OpenPasswordView" Margin="484,10,0,0" Height="49" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FF3387EC" RenderTransformOrigin="-7.72,2.224">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
@@ -43,7 +43,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button Command="{Binding OpenNumbersView}" Content="Номера" HorizontalAlignment="Left" Margin="316,82,0,0" VerticalAlignment="Top" Width="202" BorderBrush="#FF040944" Height="41" Background="#D870B4DB" Grid.RowSpan="2"/>
+        <Button Click="OpenNumbersView" Content="Номера" HorizontalAlignment="Left" Margin="316,82,0,0" VerticalAlignment="Top" Width="202" BorderBrush="#FF040944" Height="41" Background="#D870B4DB" Grid.RowSpan="2"/>
         <Label Content="Гостиница" HorizontalAlignment="Left" Margin="218,10,0,0" VerticalAlignment="Top" Width="143" FontFamily="Wide Latin" FontSize="24" FontWeight="Bold" Height="35">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -52,7 +52,8 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Button Command="{Binding OpenPayView}" Content="Оплата" HorizontalAlignment="Left" Margin="316,146,0,0" VerticalAlignment="Top" Width="202" BorderBrush="#FF040944" Height="41" Background="#D870B4DB" Grid.RowSpan="2"/>
+        <Frame x:Name="MyFrame" NavigationUIVisibility="Visible"/>
+        <Button Click="OpenPayView" Content="Оплата" HorizontalAlignment="Left" Margin="316,146,0,0" VerticalAlignment="Top" Width="202" BorderBrush="#FF040944" Height="41" Background="#D870B4DB" Grid.RowSpan="2"/>
     </Grid>
 </Window>
 

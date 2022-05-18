@@ -78,12 +78,12 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button Command="{Binding SaveClients}"  HorizontalAlignment="Left" Margin="611,127,0,0" VerticalAlignment="Top" Width="52" Height="35">
+        <Button Command="{Binding SaveClients}"  HorizontalAlignment="Left" Margin="504,167,0,0" VerticalAlignment="Top" Width="115" Height="63" Content="Save&#xD;&#xA; ">
             <Button.Template>
                 <ControlTemplate>
-                    <Grid>
+                    <Grid Margin="70,0,0,0">
                         <Ellipse x:Name="ell" Margin="6,0,0,-9" />
-
+                        <Image  RenderTransformOrigin="0.321,0.5" Width="42" Margin="0,0,0,-9" Source="..\Images\Save4.png" Height="Auto" HorizontalAlignment="Right" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">

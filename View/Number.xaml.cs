@@ -23,5 +23,11 @@ namespace Sanator.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TypeNumber t = new TypeNumber();
+            t.Show();
+        }
     }
 }

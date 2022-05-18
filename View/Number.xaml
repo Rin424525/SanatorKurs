@@ -121,7 +121,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button  Command="{Binding AddNumber}"  HorizontalAlignment="Left" Margin="24,399,0,0" Width="47" Height="31" VerticalAlignment="Top">
+        <Button  Command="{Binding AddNumber}"  HorizontalAlignment="Left" Margin="24,399,0,0" Width="47" Height="31" VerticalAlignment="Top" Click="Button_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
